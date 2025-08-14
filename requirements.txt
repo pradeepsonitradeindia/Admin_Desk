@@ -1,0 +1,11 @@
+asgiref==3.9.1
+dataclasses==0.6
+Django==5.2.5
+django-crispy-forms==2.4
+djongo==1.2.31
+dnspython==2.7.0
+gunicorn==23.0.0
+packaging==25.0
+pymongo==4.14.0
+python-decouple==3.8
+sqlparse==0.5.3
