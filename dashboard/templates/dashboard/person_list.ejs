@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Desk</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .top-bar form {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Desk</h2>
+
+    <div class="top-bar">
+        <form method="GET">
+            <input type="text" name="q" value="{{ search_query }}" placeholder="Search username...">
+            <button type="submit">Search</button>
+        </form>
+        <a href="{% url 'person_create' %}"><button>Create</button></a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Username</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in people %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ person.username }}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.phone }}</td>
+                <td>
+                    <a href="{% url 'person_update' person.id %}">Update</a> |
+                    <a href="{% url 'person_delete' person.id %}" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5">No data found</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
