@@ -10,7 +10,7 @@ def person_list(request):
         people = Person.objects.filter(username__icontains=search_query)
     else:
         people = Person.objects.all()
-    return render(request, 'dashboard/person_list.html', {'people': people, 'search_query': search_query})
+    return render(request, 'dashboard/person_list.ejs', {'people': people, 'search_query': search_query})
 
 # Create the Persons
 
@@ -22,7 +22,7 @@ def person_create(request):
             return redirect('person_list')
     else:
         form = PersonForm()
-    return render(request, 'dashboard/person_form.html', {'form': form, 'title': 'Create Person'})
+    return render(request, 'dashboard/person_form.ejs', {'form': form, 'title': 'Create Person'})
 
 # Update the Persons
 
@@ -35,7 +35,7 @@ def person_update(request, pk):
             return redirect('person_list')
     else:
         form = PersonForm(instance=person)
-    return render(request, 'dashboard/person_form.html', {'form': form, 'title': 'Update Person'})
+    return render(request, 'dashboard/person_form.ejs', {'form': form, 'title': 'Update Person'})
 
 # Delete the Persons
 
