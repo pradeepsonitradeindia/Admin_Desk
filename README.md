@@ -25,7 +25,7 @@ Secure admin access (if authentication is implemented).
 
 **Tech Stack**
 
-Frontend: EJS, CSS, JavaScript
+Frontend: EJS, CSS
 
 Backend: Django
 
