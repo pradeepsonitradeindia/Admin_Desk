@@ -1,6 +1,5 @@
 # Admin_Desk
 
----
 
 Admin_Desk is a basic admin panel application that allows administrators to perform CRUD (Create, Read, Update, Delete) operations on a connected database.
 It provides an intuitive interface to manage records efficiently.
