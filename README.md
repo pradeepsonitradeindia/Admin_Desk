@@ -51,7 +51,7 @@ Admin_Desk/
 
 Clone the repository
 
-git clone https://github.com/your-username/Admin_Desk.git
+git clone https://github.com/pradeepsonitradeindia/Admin_Desk.git
 
 cd Admin_Desk
 
