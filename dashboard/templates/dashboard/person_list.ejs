@@ -1,28 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Admin Desk</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        .top-bar form {
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h2>Admin Desk</h2>
